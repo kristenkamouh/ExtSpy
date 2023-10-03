@@ -20,7 +20,7 @@ def get_file_type(file_path):
 
 def browse_folder():
     folder_path = filedialog.askdirectory()
-    output_file = "file_types.txt"
+    output_file = "file_types.txt" # name of the file where you want to see the name and directory
 
     with open(output_file, "w") as f:
         for root, dirs, files in os.walk(folder_path):
