@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog, messagebox, ttk
+from tkinter import PhotoImage, filedialog, messagebox, ttk
 import os
 import magic 
 
@@ -49,19 +49,33 @@ def browse_folder():
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {e}")
 
+# Set up the main application window
 window = tk.Tk()
-window.title('File Type Checker')
+window.title('Extension Checker')
 window.geometry('300x150')
 
-tk.Label(window, text='Select a folder to scan for file types:').pack(pady=10)
+# Change the background color of the window
+window.configure(bg='#8a99db')  # Light blue color
 
-browse_button = tk.Button(window, text="Browse", command=browse_folder)
+# Set the window icon
+base_path = os.path.dirname(__file__)
+logo = PhotoImage(file=os.path.join(base_path, "./extension-cord.png"))
+window.iconphoto(False, logo)
+
+# Set up the label
+tk.Label(window, text='Select a folder to scan for file types:', bg='#8a99db').pack(pady=10)
+
+# Set up the browse button with a different color
+browse_button = tk.Button(window, text="Browse", command=browse_folder, bg='#f1f2a2', fg='black') 
 browse_button.pack(pady=5)
 
+# Set up the progress bar
 progress_bar = ttk.Progressbar(window, orient='horizontal', length=250, mode='determinate')
 progress_bar.pack(pady=5)
 
-result_label = tk.Label(window, text='')
+# Set up the result label
+result_label = tk.Label(window, text='', bg='#8a99db')
 result_label.pack(pady=5)
 
+# Start the application loop
 window.mainloop()
