@@ -98,11 +98,15 @@ auto-py-to-exe
 ExtSpy/
 ├── main.py              # Application entry point
 ├── assets/             # Images and resources
-│   └── extspy-logo.png
+│   └── extspy.png
+│   └── extspy.ico
+│   └── image.png       # for the github documentation
 ├── scanner/            # Scanner module
 │   └── FileScanner.py
 ├── utils/              # Utility functions
 │   └── FileOperation.py
+├── ui/            # UI elements and butons
+│   └── MainWindow.py
 ├── requirements.txt    # Project dependencies
 └── README.md          # Documentation
 ```
