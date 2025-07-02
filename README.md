@@ -131,7 +131,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Author
 
 Kristen Kamouh
-- GitHub: [@yourusername](https://github.com/kristenkamouh)
+- GitHub: [@kristenkamouh](https://github.com/kristenkamouh)
 
 ## Acknowledgments
 
